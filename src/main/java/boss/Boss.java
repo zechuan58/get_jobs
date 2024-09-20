@@ -435,11 +435,11 @@ public class Boss {
             return false;
         }
         // 如果职位薪资下限低于期望的最低薪资，返回不符合
-        if (jobSalary[1] < miniSalary) {
+        if (jobSalary[0] < miniSalary) {
             return true;
         }
         // 如果职位薪资上限高于期望的最高薪资，返回不符合
-        return maxSalary != null && jobSalary[0] > maxSalary;
+        return maxSalary != null && jobSalary[1] > maxSalary;
     }
 
     private static void RandomWait() {
